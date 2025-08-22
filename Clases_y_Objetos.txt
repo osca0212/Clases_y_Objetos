@@ -71,7 +71,7 @@ let naruto = Ninja("Naruto Uzumaki", "Konoha", "Genin")
 let rasengan = Jutsu("Rasengan", "Ninjutsu", 90)
 let equipo7 = Equipo("Equipo 7", 3, "Konoha")
 let kakashi = Sensei("Kakashi Hatake", "Konoha", "Sharingan")
-let mision1 = Mision("Proteger a Tazuna", "C", "País de las Olas")
+let mision1 = Mision("Proteger a Sasuke", "C", "País de las Olas")
  
 // -------------------------------
 // Menú interactivo
