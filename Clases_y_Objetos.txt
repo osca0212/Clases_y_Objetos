@@ -1,0 +1,118 @@
+// Tema: Naruto - Clases y Objetos
+ 
+// Clase 1: Ninja
+class Ninja {
+    var nombre: String
+    var aldea: String
+    var nivel: String
+    
+    init(_ nombre: String, _ aldea: String, _ nivel: String) {
+        self.nombre = nombre
+        self.aldea = aldea
+        self.nivel = nivel
+    }
+}
+ 
+// Clase 2: Jutsu
+class Jutsu {
+    var nombre: String
+    var tipo: String
+    var poder: Int
+    
+    init(_ nombre: String, _ tipo: String, _ poder: Int) {
+        self.nombre = nombre
+        self.tipo = tipo
+        self.poder = poder
+    }
+}
+ 
+// Clase 3: Equipo
+class Equipo {
+    var nombre: String
+    var miembros: Int
+    var aldea: String
+    
+    init(_ nombre: String, _ miembros: Int, _ aldea: String) {
+        self.nombre = nombre
+        self.miembros = miembros
+        self.aldea = aldea
+    }
+}
+ 
+// Clase 4: Sensei
+class Sensei {
+    var nombre: String
+    var aldea: String
+    var especialidad: String
+    
+    init(_ nombre: String, _ aldea: String, _ especialidad: String) {
+        self.nombre = nombre
+        self.aldea = aldea
+        self.especialidad = especialidad
+    }
+}
+ 
+// Clase 5: Mision
+class Mision {
+    var nombre: String
+    var rango: String
+    var lugar: String
+    
+    init(_ nombre: String, _ rango: String, _ lugar: String) {
+        self.nombre = nombre
+        self.rango = rango
+        self.lugar = lugar
+    }
+}
+ 
+// -------------------------------
+// Objetos creados
+let naruto = Ninja("Naruto Uzumaki", "Konoha", "Genin")
+let rasengan = Jutsu("Rasengan", "Ninjutsu", 90)
+let equipo7 = Equipo("Equipo 7", 3, "Konoha")
+let kakashi = Sensei("Kakashi Hatake", "Konoha", "Sharingan")
+let mision1 = Mision("Proteger a Tazuna", "C", "País de las Olas")
+ 
+// -------------------------------
+// Menú interactivo
+import Foundation
+ 
+func mostrarMenu() {
+    var opcion = 0
+    repeat {
+        print("""
+        =========================
+        Selecciona una clase:
+        1. Ninja
+        2. Jutsu
+        3. Equipo
+        4. Sensei
+        5. Mision
+        0. Salir
+        =========================
+        """)
+        
+        if let input = readLine(), let num = Int(input) {
+            opcion = num
+            switch opcion {
+            case 1:
+                print("Ninja: \(naruto.nombre), Aldea: \(naruto.aldea), Nivel: \(naruto.nivel)\n")
+            case 2:
+                print("Jutsu: \(rasengan.nombre), Tipo: \(rasengan.tipo), Poder: \(rasengan.poder)\n")
+            case 3:
+                print("Equipo: \(equipo7.nombre), Miembros: \(equipo7.miembros), Aldea: \(equipo7.aldea)\n")
+            case 4:
+                print("Sensei: \(kakashi.nombre), Aldea: \(kakashi.aldea), Especialidad: \(kakashi.especialidad)\n")
+            case 5:
+                print("Mision: \(mision1.nombre), Rango: \(mision1.rango), Lugar: \(mision1.lugar)\n")
+            case 0:
+                print("Saliendo del programa...")
+            default:
+                print("Opción no válida\n")
+            }
+        }
+    } while opcion != 0
+}
+ 
+// Ejecutar menú
+mostrarMenu()
